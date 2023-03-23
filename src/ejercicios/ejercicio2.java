@@ -19,15 +19,14 @@ imprima los datos de las personas ingresadas por teclado e indique si
 son mayores o menores de edad. Después de cada persona, el programa
 debe preguntarle al usuario si quiere seguir mostrando personas y frenar
 cuando el usuario ingrese la palabra “No”.
-*/
-
+ */
 public class ejercicio2 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
 
         System.out.println("ingrese el nombre");
         String nom = leer.nextLine();
@@ -50,13 +49,15 @@ public class ejercicio2 {
                 System.out.println("es mayor de edad");
 
             }
-            System.out.println("quiere seguir ingresando personas? n/s");
-            resp = leer.nextLine();
-            
+
             System.out.println("ingrese el nombre");
             n = leer.nextLine();
             System.out.println("ingrese la edad");
             ed = leer.nextInt();
+            leer.nextLine();
+            System.out.println("quiere seguir ingresando personas? n/s");
+            resp = leer.nextLine();
+
         } while (resp.equalsIgnoreCase("s"));
         {
 
@@ -65,7 +66,4 @@ public class ejercicio2 {
     }
 
 }
-    
-    
-
- 
+  
